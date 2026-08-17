@@ -1,0 +1,178 @@
+{
+  "design_principles": {
+    "overall_style": "Futuristic AI recruitment platform with dark theme and cosmic aesthetic",
+    "layout_style": "Floating card-based interface with spatial arrangement, asymmetric positioning",
+    "visual_vibe": "Sophisticated, high-tech, sci-fi inspired with warm golden accents against dark space",
+    "use_of_space": "Abundant negative space with floating elements, creates depth and dimensionality",
+    "image_style": "Cosmic background with stars and golden horizon gradient, minimal UI photography",
+    "animation_style": "Implied smooth transitions, floating elements, particle effects, interactive cursor trails"
+  },
+  "colors": {
+    "primary": "#1A1A1A",
+    "primary_variant": "#0D0D0D",
+    "secondary": "#FFA726",
+    "secondary_variant": "#FF8F00",
+    "background": "#000000",
+    "surface": "#1E1E1E",
+    "accent": "#FFB84D",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#B8B8B8",
+    "text_muted": "#6B6B6B",
+    "border": "#2A2A2A",
+    "success": "#4CAF50",
+    "warning": "#FFA726",
+    "error": "#E74C3C",
+    "info": "#2196F3"
+  },
+  "typography": {
+    "font_family_primary": "SF Pro Display, Inter, system-ui, sans-serif",
+    "font_family_secondary": "SF Mono, Consolas, monospace",
+    "heading": {
+      "h1": {
+        "size": "48px",
+        "weight": "300",
+        "line_height": "1.1",
+        "letter_spacing": "0.02em"
+      },
+      "h2": {
+        "size": "24px",
+        "weight": "400",
+        "line_height": "1.3",
+        "letter_spacing": "0.01em"
+      },
+      "h3": {
+        "size": "18px",
+        "weight": "500",
+        "line_height": "1.4",
+        "letter_spacing": "0"
+      }
+    },
+    "body": {
+      "regular": {
+        "size": "14px",
+        "weight": "400",
+        "line_height": "1.5",
+        "letter_spacing": "0"
+      },
+      "small": {
+        "size": "12px",
+        "weight": "400",
+        "line_height": "1.4",
+        "letter_spacing": "0"
+      },
+      "label": {
+        "size": "11px",
+        "weight": "500",
+        "line_height": "1.3",
+        "letter_spacing": "0.05em"
+      }
+    }
+  },
+  "borders_and_radius": {
+    "card_radius": "16px",
+    "button_radius": "24px",
+    "input_radius": "12px",
+    "chip_radius": "20px",
+    "border_width_thin": "1px",
+    "border_width_thick": "2px"
+  },
+  "shadows": {
+    "card": "0 8px 32px rgba(0, 0, 0, 0.6)",
+    "elevated": "0 12px 48px rgba(0, 0, 0, 0.8)",
+    "button": "0 4px 16px rgba(255, 167, 38, 0.2)"
+  },
+  "spacing": {
+    "section_padding_vertical": "60px",
+    "section_padding_horizontal": "40px",
+    "card_padding": "24px",
+    "grid_gap": "20px",
+    "button_padding": "12px 28px",
+    "input_padding": "12px 16px"
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "transparent",
+        "text_color": "#FFFFFF",
+        "border_radius": "24px",
+        "padding": "12px 28px",
+        "font": "14px / 500",
+        "shadow": "0 4px 16px rgba(255, 167, 38, 0.2)"
+      },
+      "secondary": {
+        "background": "transparent",
+        "text_color": "#FFFFFF",
+        "border_radius": "24px",
+        "padding": "12px 28px",
+        "font": "14px / 500",
+        "border": "1px solid #2A2A2A"
+      }
+    },
+    "inputs": {
+      "default": {
+        "background": "#1E1E1E",
+        "border": "1px solid #2A2A2A",
+        "radius": "12px",
+        "text_color": "#FFFFFF",
+        "placeholder_color": "#6B6B6B"
+      }
+    },
+    "cards": {
+      "default": {
+        "background": "#1A1A1A",
+        "radius": "16px",
+        "shadow": "0 8px 32px rgba(0, 0, 0, 0.6)",
+        "border": "1px solid #2A2A2A",
+        "padding": "24px"
+      }
+    },
+    "tags_or_chips": {
+      "default": {
+        "background": "#2A2A2A",
+        "text_color": "#FFFFFF",
+        "radius": "20px",
+        "border": "1px solid #3A3A3A"
+      }
+    }
+  },
+  "sections_layout": {
+    "hero": {
+      "layout": "Full-width cosmic background with centered branding and tagline in top right corner",
+      "alignment": "Logo top left, tagline top right, floating elements throughout",
+      "typography_usage": "Uppercase light weight text for tagline, thin sans-serif for brand name",
+      "image_usage": "Cosmic gradient background with stars and shooting star effects, golden horizon glow",
+      "call_to_action_style": "Minimalist floating cards with transparent buttons and subtle borders"
+    },
+    "features": {
+      "layout": "Floating card interface with job posting card in center, navigation elements on left, chat/messaging interface on right",
+      "cards_style": "Dark semi-transparent cards with rounded corners, subtle borders, elevated shadows creating depth",
+      "icons_style": "Minimal line icons, small circular profile images, grid-based navigation dots on left panel"
+    },
+    "social_proof": {
+      "layout": "",
+      "testimonials_style": "",
+      "logos_style": ""
+    },
+    "pricing": {
+      "layout": "",
+      "cards_style": "",
+      "highlighted_plan_style": ""
+    },
+    "cta_final": {
+      "layout": "Bottom section with product tagline on left and creator credit on right",
+      "background_style": "Dark background with subtle golden glow in bottom right corner",
+      "button_style": ""
+    },
+    "footer": {
+      "layout": "Minimal footer with product description on left, creator attribution center, and CTA on right",
+      "columns_structure": "Three-column layout: product name/tagline, creator credit, action prompt",
+      "typography_usage": "Small uppercase text with light weight, high letter spacing for modern tech aesthetic"
+    }
+  },
+  "illustrations_and_images": {
+    "overall_style": "Cosmic space theme with particle effects, stars, and golden gradient horizon",
+    "shapes_and_decoration": "Geometric grid lines, circular navigation dots, floating cursor trails, shooting star effects, wireframe background patterns",
+    "icons_style": "Minimal line icons with thin strokes, circular profile avatars, small utility icons for actions",
+    "photo_style": "Small circular profile photos for candidates and AI assistant, minimal use of photography"
+  }
+}

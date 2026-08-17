@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Representante Comercial — JVF Máquinas</title>
+<meta name="description" content="Representantes comerciais autônomos (PJ) para a linha amarela da JVF Máquinas. Uma vaga por estado, com exclusividade territorial, comissionamento agressivo e território nacional." />
+<meta property="og:title" content="Representante Comercial Externo — JVF Máquinas" />
+<meta property="og:description" content="Território exclusivo no seu estado. Comissionamento agressivo, aceleradores e prêmio anual. Uma vaga por estado, atuação nacional." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   JVF MÁQUINAS — Landing de recrutamento (Representante Comercial)
+   Design system: tema escuro cósmico + horizonte dourado.
+   Tokens de design_system.txt. Fonte Inter.
+   ============================================================ */
+
+:root{
+  --primary:#1A1A1A;
+  --primary-variant:#0D0D0D;
+  --bg:#000000;
+  --surface:#1E1E1E;
+  --card:#141414;
+  --secondary:#FFA726;
+  --secondary-variant:#FF8F00;
+  --accent:#FFB84D;
+  --amber-soft:rgba(255,167,38,.14);
+  --text:#F5F5F5;
+  --text-2:#B8B8B8;
+  --text-3:#6B6B6B;
+  --border:#242424;
+  --border-2:#2E2A22;
+  --success:#4CAF50;
+  --error:#E74C3C;
+
+  --r-card:16px;
+  --r-btn:24px;
+  --r-input:12px;
+  --r-chip:20px;
+
+  --shadow-card:0 10px 34px rgba(0,0,0,.55);
+  --shadow-elevated:0 18px 60px rgba(0,0,0,.72);
+  --shadow-amber:0 8px 30px rgba(255,167,38,.22);
+
+  --maxw:1120px;
+  --gutter:clamp(20px,5vw,48px);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font);
+  color:var(--text);background:var(--bg);
+  line-height:1.55;font-size:16px;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+::selection{background:rgba(255,167,38,.28);color:#fff}
+
+/* ---------- Cosmic background ---------- */
+.sky{position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(120% 80% at 50% 118%, rgba(255,143,0,.30) 0%, rgba(255,167,38,.10) 26%, rgba(0,0,0,0) 52%),
+  radial-gradient(90% 60% at 82% -8%, rgba(120,90,40,.18) 0%, rgba(0,0,0,0) 55%),
+  linear-gradient(180deg,#050505 0%, #000 45%, #050300 100%);}
+.sky::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(60% 42% at 50% 116%, rgba(255,184,77,.42), rgba(255,184,77,0) 70%);
+  mix-blend-mode:screen;opacity:.8}
+#stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- Layout ---------- */
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+section{position:relative}
+.section-pad{padding-block:clamp(64px,10vw,120px)}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.28));
+  border-bottom:1px solid rgba(255,255,255,.05)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.logo-plate{display:grid;place-items:center;background:#fff;border-radius:11px;
+  padding:5px 9px;box-shadow:0 4px 16px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.08)}
+.logo-plate img{height:26px;width:auto;display:block}
+.brand b{font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:var(--text)}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:13.5px;color:var(--text-2);letter-spacing:.01em;transition:color .2s var(--ease)}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:var(--r-btn);
+  font-size:13px;font-weight:600;color:#1a1200;
+  background:linear-gradient(180deg,var(--accent),var(--secondary));
+  box-shadow:var(--shadow-amber);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(255,167,38,.34)}
+@media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+
+/* ---------- Hero ---------- */
+.hero{padding-top:clamp(64px,12vw,120px);padding-bottom:clamp(56px,9vw,104px);text-align:center}
+.hero .eyebrow-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:var(--r-chip);
+  font-size:12px;letter-spacing:.04em;color:var(--text-2);
+  background:rgba(255,255,255,.03);border:1px solid var(--border-2)}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+.hero h1{font-weight:300;letter-spacing:-.02em;line-height:1.04;
+  font-size:clamp(2.4rem,6.2vw,4.5rem);margin-bottom:22px}
+.hero h1 .lead{display:block;font-weight:600;
+  background:none;color:var(--text)}
+.hero h1 em{font-style:normal;color:var(--accent);font-weight:400}
+.hero .sub{max-width:60ch;margin:0 auto 14px;color:var(--text-2);font-size:clamp(1rem,2.2vw,1.18rem);font-weight:300}
+.hero .loc{color:var(--text-3);font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:38px}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 30px;border-radius:var(--r-btn);font-size:15px;font-weight:600;cursor:pointer;
+  border:1px solid transparent;transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease),background .2s var(--ease)}
+.btn-primary{color:#1a1200;background:linear-gradient(180deg,var(--accent),var(--secondary));box-shadow:var(--shadow-amber)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(255,167,38,.38)}
+.btn-ghost{color:var(--text);background:rgba(255,255,255,.02);border-color:var(--border)}
+.btn-ghost:hover{border-color:rgba(255,184,77,.5);transform:translateY(-2px)}
+
+/* territory strip */
+.terr{margin-top:56px;display:flex;flex-wrap:wrap;justify-content:center;gap:26px 42px;align-items:baseline}
+.terr .stat{text-align:center}
+.terr .num{font-size:clamp(2rem,4.5vw,2.9rem);font-weight:300;letter-spacing:-.02em;color:#fff;line-height:1}
+.terr .num em{font-style:normal;color:var(--accent)}
+.terr .lab{display:block;margin-top:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.terr .sep{width:1px;align-self:stretch;background:linear-gradient(180deg,transparent,var(--border-2),transparent)}
+@media(max-width:620px){.terr .sep{display:none}}
+
+/* ---------- Intro statement ---------- */
+.statement{border-top:1px solid rgba(255,255,255,.05)}
+.statement .kick{color:var(--accent);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:22px}
+.statement h2{font-weight:300;letter-spacing:-.015em;line-height:1.18;font-size:clamp(1.7rem,3.6vw,2.7rem);max-width:22ch}
+.statement h2 strong{font-weight:600;color:#fff}
+.statement .body{margin-top:26px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}
+.statement p{color:var(--text-2);font-size:1.02rem;font-weight:300;max-width:62ch}
+.statement .aside{padding:22px 24px;border-radius:var(--r-card);
+  background:linear-gradient(180deg,rgba(255,167,38,.06),rgba(255,167,38,.02));
+  border:1px solid var(--border-2)}
+.statement .aside b{color:#fff;font-weight:600;font-size:14px;letter-spacing:.02em}
+.statement .aside span{display:block;margin-top:8px;color:var(--text-2);font-size:14px;font-weight:300}
+.statement .aside a{color:var(--accent);border-bottom:1px solid rgba(255,184,77,.4)}
+@media(max-width:760px){.statement .body{grid-template-columns:1fr;gap:22px}}
+
+/* ---------- Offer (feature grid, editorial) ---------- */
+.offer h2{font-weight:300;letter-spacing:-.015em;font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.14}
+.offer h2 strong{font-weight:600}
+.offer .intro{color:var(--text-2);font-weight:300;max-width:56ch;margin-top:16px;font-size:1.02rem}
+.offer-grid{margin-top:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.feat{position:relative;border:1px solid var(--border);border-radius:var(--r-card);
+  background:linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.008));
+  padding:26px;overflow:hidden;transition:border-color .25s var(--ease),transform .25s var(--ease),background .25s var(--ease)}
+.feat::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(120% 90% at 0% 0%, rgba(255,167,38,.10), transparent 46%);opacity:0;transition:opacity .3s var(--ease)}
+.feat:hover{transform:translateY(-3px);border-color:rgba(255,184,77,.34)}
+.feat:hover::before{opacity:1}
+.feat .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px;
+  background:rgba(255,167,38,.10);border:1px solid var(--border-2);color:var(--accent)}
+.feat .ic svg{width:20px;height:20px}
+.feat h3{font-size:1.06rem;font-weight:600;letter-spacing:-.01em;margin-bottom:8px}
+.feat p{color:var(--text-2);font-size:.95rem;font-weight:300}
+.feat.wide{grid-column:span 6}
+.feat.full-row{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.feat.full-row .ic{margin-bottom:0}
+.feat.reg{grid-column:span 3}
+.feat.lead-card{grid-column:span 6;background:
+  radial-gradient(130% 130% at 100% 0%, rgba(255,143,0,.16), transparent 55%),
+  linear-gradient(180deg,rgba(255,167,38,.07),rgba(255,255,255,.01));
+  border-color:var(--border-2)}
+.feat.lead-card h3{font-size:1.28rem}
+.feat.lead-card p{color:#cfcaca;font-size:1rem}
+@media(max-width:900px){.feat.wide,.feat.lead-card{grid-column:span 6}.feat.reg{grid-column:span 6}}
+@media(max-width:600px){.offer-grid{gap:14px}.feat,.feat.wide,.feat.reg,.feat.lead-card{grid-column:1/-1}}
+
+/* ---------- Two-column lists (responsabilidades / requisitos) ---------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+.duo .col h2{font-weight:300;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.01em;margin-bottom:6px}
+.duo .col h2 strong{font-weight:600}
+.duo .col .hint{color:var(--text-3);font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:26px}
+.lst{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.lst li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.055);color:var(--text-2);font-weight:300;font-size:.98rem;align-items:flex-start}
+.lst li:last-child{border-bottom:0}
+.lst li .mk{flex:none;margin-top:3px;color:var(--accent)}
+.lst li .mk svg{width:16px;height:16px;display:block}
+.lst li b{color:var(--text);font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{padding:7px 13px;border-radius:var(--r-chip);font-size:12.5px;color:var(--text-2);
+  background:rgba(255,255,255,.03);border:1px solid var(--border-2)}
+@media(max-width:760px){.duo{grid-template-columns:1fr;gap:44px}}
+
+/* ---------- Model timeline ---------- */
+.model h2{font-weight:300;font-size:clamp(1.6rem,3.2vw,2.3rem);letter-spacing:-.015em;text-align:center}
+.model h2 strong{font-weight:600}
+.model .sub{text-align:center;color:var(--text-2);font-weight:300;max-width:52ch;margin:14px auto 0}
+.timeline{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+.timeline::before{content:"";position:absolute;top:22px;left:8%;right:8%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--border-2) 12%,var(--border-2) 88%,transparent)}
+.step{position:relative;text-align:center;padding:0 8px}
+.step .node{width:44px;height:44px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 30%, #1b1710, #0b0a08);border:1px solid var(--border-2);color:var(--accent);
+  box-shadow:0 0 0 6px rgba(0,0,0,.55),0 8px 22px rgba(0,0,0,.6);position:relative;z-index:1}
+.step .node svg{width:20px;height:20px}
+.step h3{font-size:1.02rem;font-weight:600;margin-bottom:8px}
+.step p{color:var(--text-2);font-size:.92rem;font-weight:300;max-width:34ch;margin:0 auto}
+@media(max-width:760px){.timeline{grid-template-columns:1fr;gap:34px}.timeline::before{top:0;bottom:0;left:22px;right:auto;width:1px;height:auto}.step{text-align:left;padding-left:64px}.step .node{margin:0 0 0 0;position:absolute;left:0;top:0}}
+
+/* ---------- Application form ---------- */
+.apply{border-top:1px solid rgba(255,255,255,.05)}
+.apply-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,56px);align-items:start}
+.apply-copy h2{font-weight:300;font-size:clamp(1.9rem,3.8vw,2.7rem);letter-spacing:-.02em;line-height:1.08}
+.apply-copy h2 strong{font-weight:600}
+.apply-copy p{color:var(--text-2);font-weight:300;margin-top:18px;max-width:44ch}
+.apply-copy .assur{margin-top:30px;display:flex;flex-direction:column;gap:14px}
+.apply-copy .assur div{display:flex;gap:12px;align-items:flex-start;color:var(--text-2);font-size:.94rem;font-weight:300}
+.apply-copy .assur .mk{color:var(--accent);flex:none;margin-top:2px}
+.apply-copy .assur .mk svg{width:17px;height:17px;display:block}
+.apply-copy .mail{margin-top:30px;font-size:14px;color:var(--text-3)}
+.apply-copy .mail a{color:var(--accent);border-bottom:1px solid rgba(255,184,77,.35)}
+
+.formcard{position:relative;border:1px solid var(--border-2);border-radius:var(--r-card);
+  background:linear-gradient(180deg,rgba(20,20,20,.92),rgba(12,12,12,.92));
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:var(--shadow-elevated);padding:clamp(22px,3.5vw,34px)}
+.formcard::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
+  background:linear-gradient(160deg,rgba(255,184,77,.28),transparent 40%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2)}
+.field label .req{color:var(--accent)}
+.field .opt{color:var(--text-3);text-transform:none;letter-spacing:0;font-weight:400}
+.field input,.field select,.field textarea{
+  width:100%;font-family:inherit;font-size:15px;color:var(--text);
+  background:#141414;border:1px solid var(--border);border-radius:var(--r-input);
+  padding:13px 15px;transition:border-color .2s var(--ease),box-shadow .2s var(--ease),background .2s var(--ease);outline:none}
+.field input::placeholder,.field textarea::placeholder{color:var(--text-3)}
+.field select{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23FFB84D' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.field select:invalid{color:var(--text-3)}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:rgba(255,184,77,.6);background:#171512;box-shadow:0 0 0 3px rgba(255,167,38,.14)}
+.field textarea{resize:vertical;min-height:104px;line-height:1.55}
+.field .help{font-size:12px;color:var(--text-3);font-weight:300}
+.field .help a{color:var(--accent)}
+
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{position:relative;cursor:pointer;user-select:none}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:var(--r-chip);
+  font-size:13px;color:var(--text-2);background:rgba(255,255,255,.03);
+  border:1px solid var(--border-2);transition:all .18s var(--ease)}
+.chip span::before{content:"";width:7px;height:7px;border-radius:50%;background:transparent;border:1px solid var(--text-3);transition:all .18s var(--ease)}
+.chip input:checked + span{color:#1a1200;background:linear-gradient(180deg,var(--accent),var(--secondary));border-color:transparent;font-weight:600}
+.chip input:checked + span::before{background:#1a1200;border-color:#1a1200}
+.chip input:focus-visible + span{box-shadow:0 0 0 3px rgba(255,167,38,.3)}
+
+.submit{width:100%;margin-top:8px;padding:16px;font-size:15.5px;font-weight:600;border:none;border-radius:var(--r-btn);
+  color:#1a1200;background:linear-gradient(180deg,var(--accent),var(--secondary));cursor:pointer;
+  box-shadow:var(--shadow-amber);transition:transform .2s var(--ease),box-shadow .2s var(--ease),opacity .2s}
+.submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 16px 42px rgba(255,167,38,.4)}
+.submit:disabled{opacity:.6;cursor:progress}
+.formnote{margin-top:14px;text-align:center;font-size:12px;color:var(--text-3);font-weight:300}
+.errline{display:none;margin-top:12px;padding:11px 14px;border-radius:10px;font-size:13px;
+  color:#ffbcb2;background:rgba(231,76,60,.10);border:1px solid rgba(231,76,60,.32)}
+.errline.on{display:block}
+
+/* success */
+.success{display:none;text-align:center;padding:26px 8px}
+.success.on{display:block;animation:pop .5s var(--ease)}
+.success .ok{width:64px;height:64px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;
+  color:#1a1200;background:linear-gradient(180deg,var(--accent),var(--secondary));box-shadow:var(--shadow-amber)}
+.success .ok svg{width:30px;height:30px}
+.success h3{font-size:1.4rem;font-weight:600;margin-bottom:10px}
+.success p{color:var(--text-2);font-weight:300;max-width:38ch;margin:0 auto}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@media(max-width:860px){.apply-grid{grid-template-columns:1fr;gap:36px}}
+@media(max-width:520px){.frow{grid-template-columns:1fr}}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid rgba(255,255,255,.06);padding-block:44px;margin-top:20px}
+.foot{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.foot .fbrand{display:flex;align-items:center;gap:12px}
+.foot .fbrand .logo-plate img{height:24px}
+.foot .fbrand span{font-size:12px;color:var(--text-3);letter-spacing:.03em}
+.foot .fnav{display:flex;gap:24px;font-size:13px;color:var(--text-3)}
+.foot .fnav a:hover{color:var(--text-2)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<!--
+  IMPECCABLE DIRECTION CONTRACT
+  THESIS: Recrutamento como território a conquistar, não formulário de vaga. Recusa o hero genérico + grade de cards uniforme; o mapa da exclusividade e a escassez ("uma vaga por estado") são o argumento.
+  OWN-WORLD: Preto cósmico com horizonte dourado (linha amarela = âmbar). Inter leve para display, dourado #FFB84D como único acento, vidro escuro, bordas 1px, cantos 16/24px. Sem gradient text, sem cards uniformes como estrutura.
+  STORY: Vendedor B2B experiente entende que há UMA vaga no seu estado, com comissão agressiva e território exclusivo; sente urgência e se candidata com currículo + dados.
+  FIRST VIEWPORT: Título leve centrado com "exclusividade territorial" em âmbat, pills de contexto, dois CTAs, e faixa de números (27 estados / 1 vaga / território exclusivo).
+  FORM: Single-page estático, mundo herdado do design_system.txt fornecido (pinned). Seed: n/a (mundo fixado pelo brief).
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+<div class="sky"></div>
+<canvas id="stars"></canvas>
+<div class="grain"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="JVF Máquinas">
+      <span class="logo-plate"><img src="logo.png" alt="JVF Máquinas" /></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#oportunidade">A oportunidade</a>
+      <a href="#vaga">A vaga</a>
+      <a href="#modelo">Modelo</a>
+      <a class="nav-cta" href="#candidatar">Candidatar-se</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="eyebrow-row reveal">
+      <span class="pill"><span class="dot"></span> Representação comercial · PJ</span>
+      <span class="pill">Território exclusivo</span>
+      <span class="pill">Atuação nacional</span>
+    </div>
+    <h1 class="reveal">
+      <span class="lead">Um território.</span>
+      Uma vaga. <em>Exclusividade</em> no seu estado.
+    </h1>
+    <p class="sub reveal">Buscamos representantes comerciais autônomos para desenvolver a carteira de <strong>máquinas de linha amarela</strong> da JVF em todo o Brasil — uma vaga por estado, com direito a comissão sobre qualquer venda faturada na sua região.</p>
+    <p class="loc reveal">Home office · atuação em campo · uma vaga por estado</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary" href="#candidatar">Quero representar meu estado</a>
+      <a class="btn btn-ghost" href="#vaga">Ver a vaga</a>
+    </div>
+
+    <div class="terr reveal" role="list">
+      <div class="stat" role="listitem"><div class="num">27</div><span class="lab">Estados disponíveis</span></div>
+      <div class="sep" aria-hidden="true"></div>
+      <div class="stat" role="listitem"><div class="num"><em>1</em></div><span class="lab">Vaga por estado</span></div>
+      <div class="sep" aria-hidden="true"></div>
+      <div class="stat" role="listitem"><div class="num">100%</div><span class="lab">Território exclusivo</span></div>
+    </div>
+  </section>
+
+  <!-- STATEMENT / SOBRE A OPORTUNIDADE -->
+  <section id="oportunidade" class="statement section-pad">
+    <div class="wrap">
+      <p class="kick reveal">A oportunidade</p>
+      <h2 class="reveal">Se a sua região ainda não tem representante da JVF, <strong>você pode ser essa referência.</strong></h2>
+      <div class="body">
+        <p class="reveal">A JVF Máquinas é importadora e distribuidora de máquinas de manutenção de linha amarela, com sede em Joinville (SC) e atuação nacional. Trabalhamos com máquinas novas, peças de reposição e pós-venda para agronegócio, construção civil, mineração, locação de equipamentos e setores correlatos. Estamos expandindo a presença comercial em todo o território nacional e buscamos parceiros de longo prazo — não vendedores de passagem — para construir carteira com exclusividade no próprio estado.</p>
+        <div class="aside reveal">
+          <b>Parceria de longo prazo</b>
+          <span>Estrutura de comissionamento competitiva, aceleradores por superação de meta e prêmio anual de performance. Conheça a empresa em <a href="https://jvfmaquinas.com.br" target="_blank" rel="noopener">jvfmaquinas.com.br</a>.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER / O QUE OFERECEMOS -->
+  <section id="vaga" class="offer section-pad">
+    <div class="wrap">
+      <h2 class="reveal">O que <strong>oferecemos</strong></h2>
+      <p class="intro reveal">Uma estrutura pensada para quem constrói carteira do zero e é remunerado por resultado — com fôlego para atravessar o ciclo de venda longo de máquinas de alto ticket.</p>
+
+      <div class="offer-grid">
+        <article class="feat lead-card reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+          <h3>Território exclusivo no seu estado</h3>
+          <p>Direito a comissão sobre qualquer venda faturada na sua região. Uma vaga por estado — sem disputar o mesmo cliente com outro representante da JVF.</p>
+        </article>
+
+        <article class="feat wide reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 15l5-5 4 4 7-7"/><path d="M20 7v5"/><path d="M20 7h-5"/></svg></div>
+          <h3>Comissionamento agressivo + aceleradores</h3>
+          <p>Percentuais diferenciados para máquinas e peças, com faixas escalonadas que aumentam quando você supera a meta mensal.</p>
+        </article>
+
+        <article class="feat reg reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M17 5h2a2 2 0 0 1 0 4h-2"/><path d="M7 5H5a2 2 0 0 0 0 4h2"/></svg></div>
+          <h3>Prêmio anual de superação</h3>
+          <p>Para quem entrega acima da meta consolidada do ano.</p>
+        </article>
+
+        <article class="feat reg reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M8 15h3"/></svg></div>
+          <h3>Ajuda de custo recuperável</h3>
+          <p>Nos três primeiros meses, para viabilizar o caixa enquanto você constrói o pipeline.</p>
+        </article>
+
+        <article class="feat reg reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h4"/></svg></div>
+          <h3>Reembolso de deslocamento</h3>
+          <p>Despesas de visitas fora da base são reembolsadas.</p>
+        </article>
+
+        <article class="feat reg reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 8v6l9 5 9-5V8"/></svg></div>
+          <h3>Treinamento presencial na matriz</h3>
+          <p>Produto e processo em Joinville (SC) — passagem, hospedagem e alimentação por conta da empresa.</p>
+        </article>
+
+        <article class="feat full-row reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <div>
+            <h3>Sem exclusividade de marca + suporte contínuo</h3>
+            <p>Você pode manter outras representações não concorrentes. E conta com suporte técnico e comercial da equipe interna: material de vendas, argumentários e política de preços clara.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESPONSABILIDADES / REQUISITOS -->
+  <section class="section-pad">
+    <div class="wrap duo">
+      <div class="col reveal">
+        <h2>O que você vai <strong>fazer</strong></h2>
+        <p class="hint">Responsabilidades</p>
+        <ul class="lst">
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Prospecção ativa</b> de clientes no estado designado.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Qualificação de oportunidades</b> e apresentação técnica dos produtos.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Condução das negociações</b> até o fechamento, com propostas para aprovação interna.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Pós-venda de primeiro nível</b>, acompanhando entrega e recompra.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Pipeline organizado</b> e reportes periódicos de resultado.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Reuniões semanais e mensais</b> com a direção comercial, remotamente.</span></li>
+        </ul>
+      </div>
+
+      <div class="col reveal">
+        <h2>Quem estamos <strong>procurando</strong></h2>
+        <p class="hint">Requisitos</p>
+        <ul class="lst">
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Experiência comprovada em <b>vendas externas B2B</b> — preferencialmente máquinas, equipamentos industriais ou insumos técnicos.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Carteira ativa</b> no seu estado (agro, construção, mineração ou correlatos) é diferencial forte.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Registro no <b>CORE</b> do seu estado ou disponibilidade para regularização imediata.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Veículo próprio</b> e disponibilidade para deslocamentos frequentes no território.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Perfil <b>consultivo</b>, com argumentação técnica e paciência para ciclos longos.</span></li>
+          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Autonomia e disciplina</b> — não há supervisão diária, mas há cobrança semanal por resultado.</span></li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Diferencial: linha amarela</span>
+          <span class="tag">Mecânica / operação</span>
+          <span class="tag">Rede com locadoras e frotistas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODELO DE TRABALHO -->
+  <section id="modelo" class="model section-pad">
+    <div class="wrap">
+      <h2 class="reveal">Como funciona o <strong>modelo de trabalho</strong></h2>
+      <p class="sub reveal">Contrato formal de representação comercial autônoma (PJ), sob a Lei 4.886/65, com relacionamento direto com a direção comercial.</p>
+      <div class="timeline">
+        <div class="step reveal">
+          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></div>
+          <h3>Contrato PJ</h3>
+          <p>Representação comercial autônoma formalizada, com política de preços e argumentários claros.</p>
+        </div>
+        <div class="step reveal">
+          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>90 dias de adaptação</h3>
+          <p>Período inicial com ajuda de custo recuperável, seguido de contrato de 12 meses renováveis.</p>
+        </div>
+        <div class="step reveal">
+          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="4" width="3" height="14"/></svg></div>
+          <h3>Autonomia com metas</h3>
+          <p>Total autonomia de agenda, com metas e indicadores acompanhados mensalmente pela direção comercial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section id="candidatar" class="apply section-pad">
+    <div class="wrap apply-grid">
+      <div class="apply-copy reveal">
+        <h2>Candidate-se ao <strong>seu território</strong></h2>
+        <p>Preencha seus dados e envie o link do seu currículo. Selecionamos por estado para uma primeira conversa remota, onde apresentamos a estrutura detalhada da proposta comercial.</p>
+        <div class="assur">
+          <div><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Uma vaga por estado — quem se candidata primeiro entra primeiro na triagem.</span></div>
+          <div><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Aceitamos candidaturas de qualquer estado do Brasil.</span></div>
+          <div><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Seus dados são usados apenas para o processo seletivo.</span></div>
+        </div>
+        <p class="mail">Prefere e-mail? Envie para <a href="mailto:recrutamento@jvfmaquinas.com.br?subject=Representante%20Comercial%20—%20Seu%20estado">recrutamento@jvfmaquinas.com.br</a></p>
+      </div>
+
+      <div class="formcard reveal">
+        <form id="apply-form" novalidate>
+          <div class="frow">
+            <div class="field">
+              <label for="nome">Nome completo <span class="req">*</span></label>
+              <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required />
+            </div>
+            <div class="field">
+              <label for="email">E-mail <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required />
+            </div>
+          </div>
+
+          <div class="frow">
+            <div class="field">
+              <label for="whatsapp">WhatsApp <span class="opt">(opcional)</span></label>
+              <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="(00) 90000-0000" />
+            </div>
+            <div class="field">
+              <label for="estado">Estado onde atua <span class="req">*</span></label>
+              <select id="estado" name="estado" required>
+                <option value="" disabled selected>Selecione o estado</option>
+                <option>Acre (AC)</option><option>Alagoas (AL)</option><option>Amapá (AP)</option>
+                <option>Amazonas (AM)</option><option>Bahia (BA)</option><option>Ceará (CE)</option>
+                <option>Distrito Federal (DF)</option><option>Espírito Santo (ES)</option><option>Goiás (GO)</option>
+                <option>Maranhão (MA)</option><option>Mato Grosso (MT)</option><option>Mato Grosso do Sul (MS)</option>
+                <option>Minas Gerais (MG)</option><option>Pará (PA)</option><option>Paraíba (PB)</option>
+                <option>Paraná (PR)</option><option>Pernambuco (PE)</option><option>Piauí (PI)</option>
+                <option>Rio de Janeiro (RJ)</option><option>Rio Grande do Norte (RN)</option><option>Rio Grande do Sul (RS)</option>
+                <option>Rondônia (RO)</option><option>Roraima (RR)</option><option>Santa Catarina (SC)</option>
+                <option>São Paulo (SP)</option><option>Sergipe (SE)</option><option>Tocantins (TO)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="frow">
+            <div class="field">
+              <label for="experiencia">Experiência em vendas B2B <span class="req">*</span></label>
+              <select id="experiencia" name="experiencia" required>
+                <option value="" disabled selected>Tempo de experiência</option>
+                <option>Menos de 1 ano</option>
+                <option>1 a 3 anos</option>
+                <option>3 a 5 anos</option>
+                <option>5 a 10 anos</option>
+                <option>Mais de 10 anos</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="carteira">Carteira ativa de clientes <span class="opt">(opcional)</span></label>
+              <select id="carteira" name="carteira_ativa">
+                <option value="" disabled selected>Tamanho aproximado</option>
+                <option>Ainda não possuo</option>
+                <option>Até 20 clientes</option>
+                <option>De 20 a 50 clientes</option>
+                <option>De 50 a 100 clientes</option>
+                <option>Mais de 100 clientes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label>Setores de experiência <span class="opt">(marque os que se aplicam)</span></label>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="setores" value="Agronegócio" /><span>Agronegócio</span></label>
+              <label class="chip"><input type="checkbox" name="setores" value="Construção civil" /><span>Construção civil</span></label>
+              <label class="chip"><input type="checkbox" name="setores" value="Mineração" /><span>Mineração</span></label>
+              <label class="chip"><input type="checkbox" name="setores" value="Locação de equipamentos" /><span>Locação de equipamentos</span></label>
+              <label class="chip"><input type="checkbox" name="setores" value="Linha amarela" /><span>Linha amarela</span></label>
+              <label class="chip"><input type="checkbox" name="setores" value="Outros" /><span>Outros</span></label>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="curriculo">Link do currículo <span class="opt">(opcional)</span></label>
+            <input id="curriculo" name="curriculo_link" type="url" inputmode="url" placeholder="https://drive.google.com/..." />
+            <span class="help">Cole o link compartilhável (Google Drive, Dropbox ou OneDrive). <a href="https://drive.google.com" target="_blank" rel="noopener">Abrir Google Drive ↗</a></span>
+          </div>
+
+          <div class="field full">
+            <label for="carta">Carta de apresentação <span class="opt">(opcional)</span></label>
+            <textarea id="carta" name="carta" placeholder="Conte brevemente sua experiência, região de atuação, setores e se possui registro ativo no CORE do seu estado."></textarea>
+          </div>
+
+          <button type="submit" class="submit" id="submit-btn">Enviar candidatura</button>
+          <div class="errline" id="err"></div>
+          <p class="formnote">Retornaremos aos candidatos selecionados por estado para uma primeira conversa remota.</p>
+        </form>
+
+        <div class="success" id="success" role="status" aria-live="polite">
+          <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Candidatura enviada!</h3>
+          <p>Recebemos seus dados. Nossa equipe entrará em contato com os selecionados do seu estado em breve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="fbrand">
+      <span class="logo-plate"><img src="logo.png" alt="JVF Máquinas" /></span>
+      <span>© 2026 JVF Máquinas · Joinville, SC</span>
+    </div>
+    <nav class="fnav">
+      <a href="https://jvfmaquinas.com.br" target="_blank" rel="noopener">jvfmaquinas.com.br</a>
+      <a href="mailto:recrutamento@jvfmaquinas.com.br">recrutamento@jvfmaquinas.com.br</a>
+      <a href="#candidatar">Candidatar-se</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+/* ===== Formspree endpoint =====
+   Substitua SEU_FORMSPREE_ID pelo ID do seu formulário (ex.: xldjabcd).
+   Enquanto não configurado, o formulário roda em MODO DEMO (mostra sucesso sem enviar). */
+const FORMSPREE_ID = "SEU_FORMSPREE_ID";
+
+/* ---- Starfield (canvas, respeita reduced-motion) ---- */
+(function(){
+  const c = document.getElementById('stars');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let w,h,stars,dpr,shoot=null,shootTimer=0;
+  function resize(){
+    dpr = Math.min(devicePixelRatio||1, 2);
+    w = c.width = innerWidth*dpr; h = c.height = innerHeight*dpr;
+    c.style.width = innerWidth+'px'; c.style.height = innerHeight+'px';
+    const count = Math.round((innerWidth*innerHeight)/9000);
+    stars = Array.from({length:count},()=>({
+      x:Math.random()*w, y:Math.random()*h*0.92,
+      r:(Math.random()*1.1+0.25)*dpr,
+      a:Math.random()*0.6+0.15,
+      tw:Math.random()*0.02+0.004, dir:Math.random()<.5?1:-1
+    }));
+  }
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    for(const s of stars){
+      if(!reduce){ s.a += s.tw*s.dir; if(s.a>0.85||s.a<0.12) s.dir*=-1; }
+      const g = 1 - (s.y/h)*0.35;
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(${255},${240 - s.y/h*40|0},${210 - s.y/h*60|0},${s.a*g})`;
+      ctx.arc(s.x,s.y,s.r,0,7);
+      ctx.fill();
+    }
+    if(!reduce){
+      shootTimer--;
+      if(!shoot && shootTimer<=0 && Math.random()<0.006){
+        shoot={x:Math.random()*w*0.7+w*0.15, y:Math.random()*h*0.3, len:0, life:1};
+      }
+      if(shoot){
+        shoot.x += 7*dpr; shoot.y += 3*dpr; shoot.len=Math.min(shoot.len+9*dpr,150*dpr); shoot.life-=0.012;
+        const grad=ctx.createLinearGradient(shoot.x,shoot.y,shoot.x-shoot.len,shoot.y-shoot.len*0.42);
+        grad.addColorStop(0,`rgba(255,200,120,${0.7*shoot.life})`);
+        grad.addColorStop(1,'rgba(255,200,120,0)');
+        ctx.strokeStyle=grad; ctx.lineWidth=1.4*dpr;
+        ctx.beginPath(); ctx.moveTo(shoot.x,shoot.y); ctx.lineTo(shoot.x-shoot.len,shoot.y-shoot.len*0.42); ctx.stroke();
+        if(shoot.life<=0){shoot=null; shootTimer=260;}
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  resize(); draw();
+  let rt; addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(resize,200)});
+})();
+
+/* ---- Reveal on scroll ---- */
+(function(){
+  const els=[...document.querySelectorAll('.reveal')];
+  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return;}
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{ if(e.isIntersecting){ e.target.style.transitionDelay=(Math.min(i,4)*60)+'ms'; e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+  els.forEach(e=>io.observe(e));
+})();
+
+/* ---- Form submit ---- */
+(function(){
+  const form=document.getElementById('apply-form');
+  const btn=document.getElementById('submit-btn');
+  const err=document.getElementById('err');
+  const success=document.getElementById('success');
+  if(!form) return;
+
+  function showErr(msg){ err.textContent=msg; err.classList.add('on'); }
+  function clearErr(){ err.classList.remove('on'); }
+
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault(); clearErr();
+
+    // validação
+    const nome=form.nome.value.trim();
+    const email=form.email.value.trim();
+    const estado=form.estado.value;
+    const exp=form.experiencia.value;
+    if(!nome){ return showErr('Por favor, informe seu nome completo.'); }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ return showErr('Informe um e-mail válido.'); }
+    if(!estado){ return showErr('Selecione o estado onde você atua.'); }
+    if(!exp){ return showErr('Selecione seu tempo de experiência em vendas B2B.'); }
+
+    btn.disabled=true; const label=btn.textContent; btn.textContent='Enviando…';
+
+    const done=()=>{ form.style.display='none'; success.classList.add('on'); success.scrollIntoView({behavior:'smooth',block:'center'}); };
+    const fail=(m)=>{ btn.disabled=false; btn.textContent=label; showErr(m); };
+
+    // MODO DEMO — Formspree ainda não configurado
+    if(FORMSPREE_ID==='SEU_FORMSPREE_ID'){
+      console.warn('[JVF] Formspree não configurado — modo demo. Defina FORMSPREE_ID no index.html.');
+      setTimeout(done, 800);
+      return;
+    }
+
+    try{
+      const data=new FormData(form);
+      data.append('_subject', 'Representante Comercial — '+estado);
+      const res=await fetch('https://formspree.io/f/'+FORMSPREE_ID,{
+        method:'POST', body:data, headers:{'Accept':'application/json'}
+      });
+      if(res.ok){ done(); }
+      else{
+        const j=await res.json().catch(()=>({}));
+        fail((j.errors && j.errors[0] && j.errors[0].message) || 'Não foi possível enviar agora. Tente novamente ou use o e-mail.');
+      }
+    }catch(_){ fail('Falha de conexão. Verifique sua internet e tente novamente.'); }
+  });
+})();
+</script>
+</body>
+</html>

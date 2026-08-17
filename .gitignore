@@ -1,0 +1,13 @@
+# Dependências / build
+node_modules/
+dist/
+.vercel/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.log
+_save.js
+logo.b64.txt
