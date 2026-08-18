@@ -98,11 +98,11 @@ header{position:sticky;top:0;z-index:50;
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a{font-size:13.5px;color:var(--text-2);letter-spacing:.01em;transition:color .2s var(--ease)}
 .nav-links a:hover{color:var(--text)}
-.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:var(--r-btn);
+.nav-links a.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:var(--r-btn);
   font-size:13px;font-weight:600;color:#000000;
   background:linear-gradient(180deg,var(--accent),var(--secondary));
   box-shadow:var(--shadow-amber);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(255,167,38,.34)}
+.nav-links a.nav-cta:hover{color:#000000;transform:translateY(-1px);box-shadow:0 12px 34px rgba(255,167,38,.34)}
 @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
 
 /* ---------- Hero ---------- */
@@ -172,14 +172,14 @@ header{position:sticky;top:0;z-index:50;
 .feat.wide{grid-column:span 6}
 .feat.full-row{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
 .feat.full-row .ic{margin-bottom:0}
-.feat.reg{grid-column:span 3}
+.feat.reg{grid-column:span 4}
 .feat.lead-card{grid-column:span 6;background:
   radial-gradient(130% 130% at 100% 0%, rgba(255,143,0,.16), transparent 55%),
   linear-gradient(180deg,rgba(255,167,38,.07),rgba(255,255,255,.01));
   border-color:var(--border-2)}
 .feat.lead-card h3{font-size:1.28rem}
 .feat.lead-card p{color:#cfcaca;font-size:1rem}
-@media(max-width:900px){.feat.wide,.feat.lead-card{grid-column:span 6}.feat.reg{grid-column:span 6}}
+@media(max-width:900px){.feat.wide,.feat.lead-card{grid-column:span 6}}
 @media(max-width:600px){.offer-grid{gap:14px}.feat,.feat.wide,.feat.reg,.feat.lead-card{grid-column:1/-1}}
 
 /* ---------- Two-column lists (responsabilidades / requisitos) ---------- */
@@ -406,14 +406,8 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding-block:44px;margin-top:
 
         <article class="feat reg reveal">
           <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M8 15h3"/></svg></div>
-          <h3>Ajuda de custo recuperável</h3>
-          <p>Nos três primeiros meses, para viabilizar o caixa enquanto você constrói o pipeline.</p>
-        </article>
-
-        <article class="feat reg reveal">
-          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h4"/></svg></div>
-          <h3>Reembolso de deslocamento</h3>
-          <p>Despesas de visitas fora da base são reembolsadas.</p>
+          <h3>Ajuda de custo</h3>
+          <p>Ajuda de custo recuperável nos primeiros meses e ajuda parcial após o período de experiência.</p>
         </article>
 
         <article class="feat reg reveal">
@@ -482,7 +476,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding-block:44px;margin-top:
         <div class="step reveal">
           <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
           <h3>90 dias de adaptação</h3>
-          <p>Período inicial com ajuda de custo recuperável, seguido de contrato de 12 meses renováveis.</p>
+          <p>Ajuda de custo recuperável nos primeiros meses e ajuda parcial após o período de experiência, seguido de contrato de 12 meses renováveis.</p>
         </div>
         <div class="step reveal">
           <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="4" width="3" height="14"/></svg></div>
