@@ -99,7 +99,7 @@ header{position:sticky;top:0;z-index:50;
 .nav-links a{font-size:13.5px;color:var(--text-2);letter-spacing:.01em;transition:color .2s var(--ease)}
 .nav-links a:hover{color:var(--text)}
 .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:var(--r-btn);
-  font-size:13px;font-weight:600;color:#1a1200;
+  font-size:13px;font-weight:600;color:#000000;
   background:linear-gradient(180deg,var(--accent),var(--secondary));
   box-shadow:var(--shadow-amber);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(255,167,38,.34)}
@@ -123,7 +123,7 @@ header{position:sticky;top:0;z-index:50;
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
   padding:15px 30px;border-radius:var(--r-btn);font-size:15px;font-weight:600;cursor:pointer;
   border:1px solid transparent;transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease),background .2s var(--ease)}
-.btn-primary{color:#1a1200;background:linear-gradient(180deg,var(--accent),var(--secondary));box-shadow:var(--shadow-amber)}
+.btn-primary{color:#000000;background:linear-gradient(180deg,var(--accent),var(--secondary));box-shadow:var(--shadow-amber)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(255,167,38,.38)}
 .btn-ghost{color:var(--text);background:rgba(255,255,255,.02);border-color:var(--border)}
 .btn-ghost:hover{border-color:rgba(255,184,77,.5);transform:translateY(-2px)}
@@ -268,7 +268,7 @@ header{position:sticky;top:0;z-index:50;
 .chip input:focus-visible + span{box-shadow:0 0 0 3px rgba(255,167,38,.3)}
 
 .submit{width:100%;margin-top:8px;padding:16px;font-size:15.5px;font-weight:600;border:none;border-radius:var(--r-btn);
-  color:#1a1200;background:linear-gradient(180deg,var(--accent),var(--secondary));cursor:pointer;
+  color:#000000;background:linear-gradient(180deg,var(--accent),var(--secondary));cursor:pointer;
   box-shadow:var(--shadow-amber);transition:transform .2s var(--ease),box-shadow .2s var(--ease),opacity .2s}
 .submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 16px 42px rgba(255,167,38,.4)}
 .submit:disabled{opacity:.6;cursor:progress}
@@ -455,7 +455,6 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding-block:44px;margin-top:
         <ul class="lst">
           <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Experiência comprovada em <b>vendas externas B2B</b> — preferencialmente máquinas, equipamentos industriais ou insumos técnicos.</span></li>
           <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Carteira ativa</b> no seu estado (agro, construção, mineração ou correlatos) é diferencial forte.</span></li>
-          <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Registro no <b>CORE</b> do seu estado ou disponibilidade para regularização imediata.</span></li>
           <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Veículo próprio</b> e disponibilidade para deslocamentos frequentes no território.</span></li>
           <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span>Perfil <b>consultivo</b>, com argumentação técnica e paciência para ciclos longos.</span></li>
           <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 8"/></svg></span><span><b>Autonomia e disciplina</b> — não há supervisão diária, mas há cobrança semanal por resultado.</span></li>
@@ -545,15 +544,8 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding-block:44px;margin-top:
 
           <div class="frow">
             <div class="field">
-              <label for="experiencia">Experiência em vendas B2B <span class="req">*</span></label>
-              <select id="experiencia" name="experiencia" required>
-                <option value="" disabled selected>Tempo de experiência</option>
-                <option>Menos de 1 ano</option>
-                <option>1 a 3 anos</option>
-                <option>3 a 5 anos</option>
-                <option>5 a 10 anos</option>
-                <option>Mais de 10 anos</option>
-              </select>
+              <label for="experiencia">Anos de experiência em vendas B2B <span class="req">*</span></label>
+              <input type="number" id="experiencia" name="experiencia" min="0" max="60" step="1" placeholder="Ex: 5" required>
             </div>
             <div class="field">
               <label for="carteira">Carteira ativa de clientes <span class="opt">(opcional)</span></label>
@@ -588,7 +580,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding-block:44px;margin-top:
 
           <div class="field full">
             <label for="carta">Carta de apresentação <span class="opt">(opcional)</span></label>
-            <textarea id="carta" name="carta" placeholder="Conte brevemente sua experiência, região de atuação, setores e se possui registro ativo no CORE do seu estado."></textarea>
+            <textarea id="carta" name="carta" placeholder="Conte brevemente sua experiência, região de atuação e setores em que já atuou."></textarea>
           </div>
 
           <button type="submit" class="submit" id="submit-btn">Enviar candidatura</button>
@@ -708,7 +700,7 @@ const FORMSPREE_ID = "xaewldzr";
     if(!nome){ return showErr('Por favor, informe seu nome completo.'); }
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ return showErr('Informe um e-mail válido.'); }
     if(!estado){ return showErr('Selecione o estado onde você atua.'); }
-    if(!exp){ return showErr('Selecione seu tempo de experiência em vendas B2B.'); }
+    if(exp===''||Number(exp)<0){ return showErr('Informe seus anos de experiência em vendas B2B.'); }
 
     btn.disabled=true; const label=btn.textContent; btn.textContent='Enviando…';
 
